@@ -1,0 +1,14 @@
+#!/bin/sh
+
+setbg &		# Set the background
+sxhkd &	# Bind keys
+xsetroot -cursor_name left_ptr &
+unclutter &		# Remove mouse when idle
+xcompmgr &
+dunst &                 # dunst for notifications
+(sleep 1s && ~/.config/polybar/launch.sh) &
+#conky &
+#blueberry-tray &
+#xrandr --output LVDS1 --mode 1366x768 --output HDMI1 --mode 1920x1080 --right-of LVDS1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+redshift -l 47.5:19.1 -t 5700:3600 -g 0.9 -m randr &
